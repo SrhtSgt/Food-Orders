@@ -17,3 +17,7 @@ code {
   font-weight: bold;
   color: crimson;
 }
+
+.row {
+  --bs-gutter-x: 0;
+}
