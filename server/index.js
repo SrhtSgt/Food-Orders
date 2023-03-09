@@ -3,20 +3,12 @@ const cors = require("cors");
 const db = require("./db");
 const burgerModel = require("./models/burgerModel");
 const app = express();
+const burgersRoute = require("./routes/burgersRoute");
 
 app.use(express.json());
 app.use(cors());
 
-//getFoods endpointi
-app.get("/getBurgers", (req, res) => {
-  burgerModel.find({}, (err, result) => {
-    if (err) {
-      res.json(err);
-    } else {
-      res.json(result);
-    }
-  });
-});
+app.use("/api/burgers/", burgersRoute);
 
 //serverımızı inşa edeceğimiz portu belirleyerek ayağa kaldırdık.
 app.listen(4000, () => {
