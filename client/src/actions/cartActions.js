@@ -8,5 +8,7 @@ export const addToCartAction = (menu, miktar, ozellik) => (dispatch) => {
     fiyat: menu.fiyat,
     fiyatlar: menu.fiyat[0][ozellik] * miktar,
   };
-  dispatch({ type: "ADD_TO_CART", payload: cartItem });
+  if (miktar > 0) {
+    dispatch({ type: "ADD_TO_CART", payload: cartItem });
+  }
 };
