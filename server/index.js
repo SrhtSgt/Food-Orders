@@ -8,6 +8,7 @@ const burgersRoute = require("./routes/burgersRoute");
 app.use(express.json());
 app.use(cors());
 
+//http://localhost:4000/api/burgers/getBurgers
 app.use("/api/burgers/", burgersRoute);
 
 //serverımızı inşa edeceğimiz portu belirleyerek ayağa kaldırdık.

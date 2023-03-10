@@ -37,7 +37,7 @@ function MenuList({ menu }) {
   return (
     <div>
       <ToastContainer
-        position="top-right"
+        position="top-left"
         autoClose={500}
         hideProgressBar={false}
         newestOnTop={false}

@@ -13,4 +13,8 @@ router.get("/getBurgers", (req, res) => {
   });
 });
 
+//put
+
+//post
+
 module.exports = router;

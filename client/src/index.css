@@ -13,6 +13,10 @@ code {
 .bg-dark {
   background-color: #f49d1a !important;
 }
+
+.bg-black {
+  background-color: #100f0f !important;
+}
 .nav-link {
   font-weight: bold;
   color: crimson;

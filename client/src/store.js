@@ -9,7 +9,15 @@ const finalReducer = combineReducers({
   cartReducer: cartReducer,
 });
 
-const initialState = {};
+const cartItems = localStorage.getItem("cartItems")
+  ? JSON.parse(localStorage.getItem("cartItems"))
+  : [];
+
+const initialState = {
+  cartReducer: {
+    cartItems: cartItems,
+  },
+};
 
 const compose = composeWithDevTools({});
 
