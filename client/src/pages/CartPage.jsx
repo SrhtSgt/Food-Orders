@@ -26,6 +26,8 @@ function CartPage() {
               </div>
               <div className="col-md-4">
                 <h5 className="text-dark ">Ürün Adedi: {urun.miktar}</h5>
+                <h5 className="text-dark ">Ürün Boyutu: {urun.ozellik}</h5>
+                <hr className="w-75 m-auto" />
                 <div className="d-flex justify-content-center align-items-center">
                   <i
                     className="fa-regular fa-square-plus text-danger fa-2x mx-2"
@@ -52,16 +54,16 @@ function CartPage() {
                     }}
                   />
                 </div>
-
-                <i
-                  className="fa-solid fa-trash text-danger fa-1x mx-2"
+                <button
+                  className="btn btn-outline-warning w-25"
                   style={{ cursor: "pointer" }}
                   onClick={() => {
                     dispatch(deleteFromCartAction(urun));
                   }}
-                />
+                >
+                  <i className="fa-solid fa-trash text-danger fa-1x mx-2" />
+                </button>
                 <h4 className="text-danger">Fiyat: {urun.fiyatlar} ₺</h4>
-                <hr className="w-75 m-auto" />
               </div>
             </div>
           ))}
