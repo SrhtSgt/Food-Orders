@@ -38,6 +38,16 @@ function Navbar() {
             </ul>
             <ul className="navbar-nav ms-auto">
               <li className="nav-item">
+                <Link className="nav-link" to="/login">
+                  Giriş Yap <i class="fa-solid fa-right-to-bracket"></i>
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/register">
+                  Kayıt Ol <i class="fa-solid fa-registered"></i>
+                </Link>
+              </li>
+              <li className="nav-item">
                 <Link className="nav-link" to="/sepet">
                   Sepet
                   <i className="fa-solid fa-bag-shopping mx-2"></i>
